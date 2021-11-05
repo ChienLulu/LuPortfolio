@@ -1,0 +1,397 @@
+@charset "UTF-8";
+
+/* 對整個網頁做設定 */
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+    /* 不累加邊框(border)與內距(padding) */
+}
+
+img {
+    display: block;
+    width  : 100%;
+}
+
+/* ------header區------ */
+
+header {
+    position: fixed;
+    height  : 90px;
+    top: 30px;
+    z-index : 100;
+}
+
+header .logo {
+    position: fixed;
+    display: block;
+    left: 50px;
+    top: 50px;
+    width  : 250px;
+}
+.logo a{
+    display: block;
+}
+
+header ul{
+    display: block;
+    list-style-type: none;
+    display: flex;
+    position: fixed;
+    right: 60px;
+    top: 60px;
+}
+
+.menu a{
+    display: block;
+    width: 100px;
+    height: 35px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    border          : solid 1px transparent;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.menu a:hover{
+    color: rgb(109, 109, 109);
+    border          : solid 1px transparent;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ------banner區------ */
+
+#banner {
+    position        : relative;
+    background-color: rgb(255, 255, 255);
+    height          : 100vh;
+    border          : solid 25px #E0B4B2;
+    overflow        : hidden;
+}
+
+.introduce{
+    transform: translate(-50%, -5%);
+    flex-direction: column;
+    top:50%; left:50%;
+    position: absolute;
+}
+
+.introduce h1{
+    letter-spacing: .1rem;
+    font-size: 3.5rem;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.2em rgb(65, 65, 65);
+}
+
+.introduce h2{
+    letter-spacing: .05rem;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.2em rgb(65, 65, 65);
+    margin-top: 5px;
+}
+
+
+.bg_img{
+    height          : 100vh;
+}
+
+.bg_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* section共用 */
+
+.list{
+    display: flex;
+    align-items: center;
+    margin: 30px 20px 10px;
+}
+
+/* ------about區------ */
+
+#about{
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    height        : 100vh;
+    background-color: white;
+}
+
+#about h1 {
+    color      : #444;
+    font-size  : 2.5em;
+    padding: 0 10px;
+    margin     : 45px 0;
+    border-bottom : solid 3.5px #E0B4B2;
+}
+
+.about_img{
+    width: 380px;
+    height: 380px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0 #E0B4B2;
+}
+
+.about_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.skill_icon{
+    display: flex;
+    align-items: center;
+}
+
+.skill_icon div{
+    display: flex;
+    align-items: center;
+    margin: 40px 5px;
+    width: 50px;
+}
+
+#about p{
+    line-height: 180%;
+    padding: 0 25px;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items   : center;
+    margin: 0 60px;
+    padding: 0 25px;
+}
+
+/* ------experience區------ */
+
+#experience{
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    height        : 100vh;
+    background-color: #ECECED;
+}
+
+#experience h1 {
+    color      : #444;
+    font-size  : 2.5em;
+    padding: 0 10px;
+    margin     : 45px 0;
+    border-bottom : solid 3.5px #E0B4B2;
+}
+
+#experience h2{
+    color: #666;
+    font-size: 2rem;
+    padding: 0 10px 3px;
+    margin-top: 40px;
+}
+
+#experience>div{
+    display: flex;
+    margin: 30px 20px 10px;
+}
+
+.timeline p{
+    font-size: 1.2rem;
+    padding: 0 10px 3px;
+    margin-top: 40px;
+}
+
+
+.timeline{
+    padding: 0 15px 43px;
+    border-left: solid 2.8px #666;
+    margin: 0 60px;
+}
+
+.timeline div{
+    display: flex;
+    align-items: center;
+    border-bottom: solid 2.8px #E0B4B2;
+}
+
+.thought{
+    margin: 0 60px;
+}
+
+.thought p{
+    background-color: white;
+    border: solid 1px #B2B2B3;
+    padding: 15px;
+}
+
+/* ------graphic區------ */
+
+#graphic{
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    height        : 100vh;
+    background-color: white;
+}
+
+#graphic h1 {
+    color      : #444;
+    font-size  : 2.5em;
+    padding: 0 10px;
+    margin     : 45px 0;
+    border-bottom : solid 3.5px #E0B4B2;
+}
+
+.graphic_list{
+    margin: 20px 0px;
+    width: 88%;
+    display: flex;
+}
+
+.graphic_list article {
+    display: flex;
+    flex: 1;
+    margin: 0 15px;
+    height: 65vh;
+    position                            : relative;
+    background-size                     : cover;
+    background-position                 : center;
+    border-radius                       : 15px;
+    overflow                            : hidden;
+}
+
+.graphic_list article:first-child {
+    background-image: url('img/perfume_1.jpg');
+}
+
+.graphic_list article:nth-child(2) {
+    background-image: url('img/bully_01.jpg');
+}
+
+.graphic_list article:nth-child(3) {
+    background-image: url('./img/chicken.jpg');
+}
+
+.graphic_list article:last-child {
+    background-image: url('./img/else_poster_03.jpg');
+}
+
+#graphic a{
+    position        : absolute; 
+    bottom          : 0;
+    left            : 0;
+    display         : block;
+    width           : 100%;
+    padding         : 10px 20px;
+    background-color: rgba(48, 48, 48, 0.4);
+    color           : white;
+    text-decoration : none;
+}
+
+
+/* ------video區------ */
+
+#video{
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    height        : 175vh;
+    background-color: #ECECED;
+}
+
+#video h1 {
+    color      : #444;
+    font-size  : 2.5em;
+    padding: 0 10px;
+    margin     : 45px 0;
+    border-bottom : solid 3.5px #E0B4B2;
+}
+
+.film{
+    width: 40%;
+}
+
+#video>div{
+    width: 80%;
+
+}
+
+#video>div>div{
+    display: flex;
+    flex: 1 2;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.video_inside{
+    padding: 0 25px;
+}
+
+.video_inside h2{
+    padding: 8px 0;
+}
+
+#video>div{
+    margin: 20px 0 10px;
+}
+/* ------contact區------ */
+
+#contact{
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    height        : 100vh;
+    background-color: white;
+}
+
+#contact h1 {
+    color      : #444;
+    font-size  : 2.5em;
+    padding: 0 10px;
+    margin     : 45px 0;
+    border-bottom : solid 3.5px #E0B4B2;
+}
+
+form{
+    display       : flex;
+    flex-direction: column;
+    width         : 35%;
+}
+
+/* ------footer區------ */
+
+footer{
+    background-color: #E0B4B2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30vh;
+}
+
+footer div{
+    display: flex;
+    flex: 1;
+    width: 50%;
+    align-items: center;
+}
+
+footer .logo {
+    display: block;
+    width: 30%;
+    margin: 0 45px;
+}
+
+footer nav{
+    border-left: solid 2px white;
+}
+
+footer ul{
+    padding: 22px 10px;
+    display: block;
+    list-style-type: none;
+    display: flex;
+    flex: 1;
+}
